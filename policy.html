@@ -7,9 +7,39 @@
   <style>
     body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; padding:1em; line-height: 1.6; }
     h2 { margin-top: 1.5em; }
+    .lang-buttons {
+      margin-bottom: 20px;
+    }
+    .lang-buttons button {
+      padding: 8px 14px;
+      margin-right: 8px;
+      border: 1px solid #ccc;
+      background: #f5f5f5;
+      cursor: pointer;
+      border-radius: 6px;
+    }
+    .lang-buttons button.active {
+      background: #000;
+      color: #fff;
+      border-color: #000;
+    }
+    .lang-content {
+      display: none;
+    }
+    .lang-content.active {
+      display: block;
+    }
   </style>
 </head>
 <body>
+
+<div class="lang-buttons">
+  <button id="btn-en" class="active" onclick="showLang('en')">English</button>
+  <button id="btn-vi" onclick="showLang('vi')">Tiếng Việt</button>
+</div>
+
+<div id="en" class="lang-content active">
+<!-- ===================== ENGLISH VERSION ===================== -->
 
 <h1>Privacy Policy</h1>
 <p>This privacy policy applies to the Pregnancy Tracker app (hereafter referred to as "Application") developed by Phan Nhat Dang ("Service Provider") as a freemium service. This service is intended for use as-is.</p>
@@ -68,6 +98,76 @@ If you’ve submitted data and wish to have it deleted, contact us at: <strong>p
 <p>This Privacy Policy may be updated from time to time. Any changes will be posted on this page with a revised date.</p>
 <p><strong>Effective Date:</strong> 2026-02-29</p>
 <p><strong>Contact:</strong> phannhatd@gmail.com</p>
+
+<hr>
+</div>
+
+<div id="vi" class="lang-content">
+<!-- ===================== VIETNAMESE VERSION ===================== -->
+
+<h1>Chính sách quyền riêng tư</h1>
+<p>Chính sách quyền riêng tư này áp dụng cho ứng dụng Pregnancy Tracker (sau đây gọi là "Ứng dụng") được phát triển bởi Phan Nhat Dang ("Nhà cung cấp dịch vụ") dưới hình thức freemium. Dịch vụ này được cung cấp và sử dụng theo hiện trạng.</p>
+
+<h2>Thu thập và sử dụng thông tin</h2>
+<p>Ứng dụng lưu trữ <strong>phần lớn dữ liệu liên quan đến sức khỏe và thai kỳ trực tiếp trên thiết bị của bạn</strong>. Bao gồm: triệu chứng, tuần thai, cơn gò, thai máy, số đo cơ thể và ghi chú cá nhân. Các dữ liệu này <strong>không được tải lên bất kỳ máy chủ nào</strong> trừ khi có thông báo cụ thể.</p>
+
+<p><strong>Ứng dụng không thu thập thông tin nhận dạng cá nhân</strong> (như tên, email hoặc thông tin liên hệ của bạn).</p>
+
+<p>Trong một số trường hợp, Ứng dụng có thể thu thập dữ liệu sử dụng không mang tính cá nhân như:</p>
+<ul>
+  <li>Thông tin thiết bị (ví dụ: hệ điều hành, mẫu thiết bị)</li>
+  <li>Thống kê sử dụng ứng dụng (màn hình đã xem, thời gian sử dụng, lỗi phát sinh)</li>
+</ul>
+<p>Dữ liệu này được thu thập <strong>ẩn danh</strong> nhằm cải thiện độ ổn định và trải nghiệm sử dụng ứng dụng.</p>
+
+<h2>Phân tích triệu chứng bằng AI</h2>
+<p>Khi bạn sử dụng tính năng “Phân tích triệu chứng bằng AI”, <strong>dữ liệu bạn nhập (ví dụ: triệu chứng, huyết áp, số lần thai máy)</strong> có thể được gửi tạm thời đến hệ thống AI bên ngoài (ChatGPT của OpenAI) nhằm tạo phản hồi cá nhân hóa. Việc này chỉ được thực hiện khi có sự đồng ý rõ ràng của bạn.</p>
+<ul>
+  <li>Dữ liệu không được lưu trữ trên máy chủ của chúng tôi</li>
+  <li>Không được sử dụng cho mục đích quảng cáo hoặc theo dõi</li>
+</ul>
+
+<h2>Sử dụng Trí tuệ Nhân tạo trong quá trình tạo nội dung</h2>
+<p>Một số hình ảnh minh họa và nội dung diễn đạt trong Ứng dụng có thể được tạo ra hoặc hỗ trợ bởi các công nghệ trí tuệ nhân tạo trong quá trình xây dựng nội dung.</p>
+<p>Các công cụ AI chỉ được sử dụng nhằm hỗ trợ biên soạn nội dung và dịch thuật. AI không tự động đưa ra chẩn đoán y khoa hoặc cung cấp tư vấn y tế cá nhân hóa.</p>
+<p>Tất cả nội dung liên quan đến sức khỏe đều được rà soát và chỉnh sửa nhằm đảm bảo tính rõ ràng và chính xác. Thông tin trong Ứng dụng chỉ mang tính chất giáo dục và tham khảo chung, không thay thế cho tư vấn y tế chuyên môn.</p>
+<p>Bản dịch có thể được hỗ trợ bởi công cụ ngôn ngữ AI và được kiểm tra lại để đảm bảo độ chính xác.</p>
+
+<h2>Dịch vụ bên thứ ba</h2>
+<p>Ứng dụng sử dụng một số công cụ bên thứ ba đáng tin cậy để cải thiện chức năng và quản lý đăng ký:</p>
+<ul>
+  <li><strong>Firebase</strong>: phân tích ẩn danh và báo cáo lỗi</li>
+  <li><strong>RevenueCat</strong>: xử lý mua hàng trong ứng dụng và đăng ký</li>
+</ul>
+
+<h2>Lựa chọn quyền riêng tư của bạn</h2>
+<p>Bạn có thể tắt theo dõi sử dụng ứng dụng (Firebase) thông qua cài đặt hệ thống trên thiết bị của mình.<br>
+Bạn có thể ngừng mọi hoạt động thu thập dữ liệu bằng cách gỡ cài đặt ứng dụng.<br>
+Nếu bạn đã gửi dữ liệu và muốn xóa, vui lòng liên hệ: <strong>phannhatd@gmail.com</strong></p>
+
+<h2>Quyền riêng tư của trẻ em</h2>
+<p>Ứng dụng không cố ý thu thập hoặc yêu cầu dữ liệu cá nhân từ trẻ em dưới 13 tuổi.</p>
+
+<h2>Bảo mật</h2>
+<p>Chúng tôi áp dụng các biện pháp kỹ thuật và tổ chức hợp lý nhằm ngăn chặn việc mất mát, lạm dụng hoặc thay đổi dữ liệu. Phần lớn dữ liệu sức khỏe nhạy cảm được lưu trữ trực tiếp trên thiết bị của bạn.</p>
+
+<h2>Thay đổi chính sách</h2>
+<p>Chính sách này có thể được cập nhật theo thời gian. Mọi thay đổi sẽ được đăng trên trang này kèm ngày hiệu lực mới.</p>
+<p><strong>Ngày hiệu lực:</strong> 2026-02-29</p>
+<p><strong>Liên hệ:</strong> phannhatd@gmail.com</p>
+</div>
+
+<script>
+function showLang(lang) {
+  document.getElementById('en').classList.remove('active');
+  document.getElementById('vi').classList.remove('active');
+  document.getElementById('btn-en').classList.remove('active');
+  document.getElementById('btn-vi').classList.remove('active');
+
+  document.getElementById(lang).classList.add('active');
+  document.getElementById('btn-' + lang).classList.add('active');
+}
+</script>
 
 </body>
 </html>
